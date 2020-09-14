@@ -15,6 +15,9 @@ inputs:
   step:
     required: true
     description: One of 'start' and 'finish'
+  env:
+    required: false
+    description: The name of the environment being deployed to
   auto_inactive:
     required: false
     description: Set auto_inactive (see https://developer.github.com/v3/repos/deployments/#inactive-deployments)
