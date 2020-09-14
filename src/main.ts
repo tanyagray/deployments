@@ -23,7 +23,13 @@ async function run() {
         const noOverride = core.getInput('no_override') !== 'false';
         const transient = core.getInput('transient') === 'true';
         const gitRef = core.getInput('ref') || ref;
-        const payload = core.getInput('payload') || {};
+        let payload = {};
+        
+        try {
+          JSON.parse(core.getInput('payload'));
+        } catch(e) {
+           console.warn('could not parse json data); 
+        }
 
         let deploymentID = core.getInput('deployment_id');
         console.log(`initializing deployment ${deploymentID} for ${environment} @ ${gitRef}`);
