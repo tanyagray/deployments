@@ -26,7 +26,7 @@ async function run() {
         let payload = {};
         
         try {
-          JSON.parse(core.getInput('payload'));
+          payload = JSON.parse(core.getInput('payload'));
         } catch(e) {
            console.warn('could not parse json data); 
         }
