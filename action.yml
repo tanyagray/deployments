@@ -27,3 +27,6 @@ inputs:
   ref:
     required: false
     description: The git ref to use for the deploy, defaults to github.ref
+  payload:
+    required: false
+    description: A JSON-formatted string to be parsed and sent in the webhook body
