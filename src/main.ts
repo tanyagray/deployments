@@ -23,7 +23,7 @@ async function run() {
         const noOverride = core.getInput('no_override') !== 'false';
         const transient = core.getInput('transient') === 'true';
         const gitRef = core.getInput('ref') || ref;
-        const payload = core.getInput('payload) || {};
+        const payload = core.getInput('payload') || '';
         
         console.log({ payload });
 
